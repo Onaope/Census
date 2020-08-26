@@ -1,0 +1,40 @@
+html,
+body,
+header,
+.view {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+#intro{
+  background: url('https://i.ibb.co/3N085Bk/20200825-140752-0000-1.png')no-repeat center center fixed;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header
+   {
+    height: 1000px;
+  }
+  .view{
+    height: 700px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  header
+ {
+    height: 650px;
+  }
+  .view{
+     height: 550px;
+  }
+}
+
+
