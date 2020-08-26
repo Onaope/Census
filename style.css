@@ -1,0 +1,75 @@
+html,
+body,
+header,
+.view,
+#informed,
+.page-footer{
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 740px) {
+ html,
+body,
+header,
+.view,
+#informed,
+.page-footer{
+    height: 1000px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+ html,
+body,
+header,
+.view,
+#informed,
+.page-footer{
+    height: 650px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+     background: #1C2331!important;
+  }
+}
+/* Navbar animation */
+.navbar {
+  background-color: rgba(0, 0, 1, 0.5); }
+
+.top-nav-collapse {
+  background-color: #1C2331; }
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #1C2331; } }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #3A83C2; }
+/*hr*/
+.hr-thin{
+width: 40%;
+height: 8px;
+background: #1E9DFA;
+border-radius: 50px;
+
+}
+.hr-thins{
+width: 35%;
+height: 8px;
+margin: auto;
+background: #1E9DFA;
+border-radius: 50px;
+}
+.female{
+  width: 38.5%;
+}
+.below{
+  width: 47%
+}
+.above{
+  width: 48%
+}
