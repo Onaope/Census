@@ -23,11 +23,16 @@ header,
     height: 650px;
   }
 }
-@media (min-width: 800px) and (max-width: 850px) {
-  .navbar:not(.top-nav-collapse) {
-     background: #1C2331!important;
-  }
+.female{
+  width: 13.5%;
 }
+.below{
+  width: 15.2%
+}
+.above{
+  width: 16%
+}
+
 /* Navbar animation */
 .navbar {
   background-color: rgba(0, 0, 1, 0.5); }
@@ -38,7 +43,16 @@ header,
 /* Adding color to the Navbar on mobile */
 @media only screen and (max-width: 768px) {
   .navbar {
-    background-color: #1C2331; } }
+    background-color: #1C2331; }
+.female{
+  width: 13.5%;
+}
+.below{
+  width: 15.2%
+}
+.above{
+  width: 16%
+}}
 
 /* Footer color for sake of consistency with Navbar */
 .page-footer {
