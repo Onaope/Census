@@ -1,9 +1,7 @@
 html,
 body,
 header,
-.view,
-#informed,
-.page-footer{
+.view{
   height: 100%;
   font-family: "Montserrat", sans-serif;
 }
@@ -12,9 +10,7 @@ header,
  html,
 body,
 header,
-.view,
-#informed,
-.page-footer{
+.view{
     height: 1000px;
   }
 }
@@ -23,9 +19,7 @@ header,
  html,
 body,
 header,
-.view,
-#informed,
-.page-footer{
+.view{
     height: 650px;
   }
 }
