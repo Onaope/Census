@@ -27,62 +27,44 @@
    </script>
 </head>
 <body>
- <div id="intro" class="view">
-       <div class="my-auto text-center">
-                          <h3 class="text-white my-3 py-5 font-weight-bold">
-                        CENSUS MANAGEMENT SYSTEM
-                      </h3>
-                          </div>
-            <div class="mask">
+<h3 class="text-center text-white py-3 mt-2 font-weight-bold text-uppercase">
+  Census Management System
+</h3>
+<section class="form-elegant">
 
-                <div class="container d-flex align-items-center mx-auto my-5 py-5 justify-content-center w-50 h-100">
+  <!--Form without header-->
+  <div class="card mx-5 px-2 py-1">
 
-                    <div class="row d-flex justify-content-center mx-auto text-center">
-                          
-                        <div class="col-md-12">
-  <div class="card viewport mx-auto">
-    <h4 class="text-dark font-weight-bold my-4 text-center">
-                        LOGIN
-                      </h4>
-    <form>
-  <!-- Name input -->
-  <div class="mx-5 py-5">
-    <input type="email"
-           id="form5Example1" 
-           class="form-control" 
-           placeholder="Enter Email Address"
-           style="background: rgba(229, 229, 229, 0.2);
-                  border-radius: 10px;" required/>
-    
-  </div>
+    <div class="card-body mx-4">
 
-  <!-- Email input -->
-  <div class="mx-5 py-5">
-    <input type="password" 
-           id="form5Example2" 
-           class="form-control" 
-           placeholder="Enter Administrator passcode"
-           style="background: rgba(229, 229, 229, 0.2);
-                  border-radius: 10px;" required/>
-    
-  </div>
-      <div class="px-3 py-5">
-  <!-- Submit button -->
-  <button type="submit" 
-          class="btn btn-primary btn-block"
-           style="background: #3A83C2;
-                  border-radius: 10px;">
-                LOG IN
-  </button>
+      <!--Header-->
+      <div class="text-center">
+        <h3 class="text-dark font-weight-bold mb-4"><strong>LOGIN</strong></h3>
       </div>
-</form>
-  </div>
-  <h4 class="text-dark font-weight-bold mt-4 text-center">ADMINISTRATOR</h4>
-</div>
-                  </div>
-              </div>
+     <form>
+      <!--Body-->
+      <div class="mb-5">
+        <input type="email" id="Form-email1" class="form-control" placeholder="Enter Email Address" required autofocus>
+      </div>
+
+      <div class="mb-4">
+        <input type="password" id="Form-pass1" class="form-control" placeholder="Enter Administrator Passcode" required autofocus>
+      </div>
+
+      <div class="text-center mb-3">
+        <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">LOGIN</button>
+      </div>
+      </form>
     </div>
+
+    
   </div>
+  <!--/Form without header-->
+
+</section>
+<h3 class="text-center text-muted my-3 text-uppercase font-weight-bold">
+  Administrator
+</h3>
   <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"
