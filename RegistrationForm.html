@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title>Registration Form</title> 
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+<link
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script>
+  (function() {
+'use strict';
+window.addEventListener('load', function() {
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.getElementsByClassName('needs-validation');
+// Loop over them and prevent submission
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+$(document).ready(function() {
+$('.datepicker').pickadate();
+$('.datepicker').removeAttr('readonly');
+});
+
+  </script>
+  </head>
+  <body>
+  
+  <!-- Section: National Census v.1 -->
+<section class="text-center my-5 p-1">
+  <!-- Grid row -->
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-lg col-md-12 mb-lg-0 mb-4">
+      <!--Card-->
+      <div class="card testimonial-card">
+        <!--Background color-->
+        <div class="card-up primary-color"></div>
+        <!--Avatar-->
+        <div class="avatar mr-auto ml-5 white">
+          <img src="https://i.ibb.co/2tm5jSQ/UPLOADFORM.png" class="rounded-circle img-fluid">
+        </div>
+        <div class="card-body">
+          <!--Heading-->
+          <h4 class="font-weight-bold mb-4 text-left">PERSONAL DATA</h4>
+          <hr>
+          <!--Form-->
+          <form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Enter First name" 
+        required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Last name" 
+        required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+        </div>
+        <input type="email" class="form-control" id="validationCustomUsername" placeholder="Email Address"
+          aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please enter a valid email address.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+     <select class="browser-default custom-select" required>
+      <option value="" disabled selected>Gender</option>
+      <option value="1">Male</option>
+      <option value="2">Female</option>
+     </select>
+      <div class="invalid-feedback">
+        Please select your gender.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <input type="number" class="form-control" id="validationCustom04" placeholder="Age (in years)" required>
+      <div class="invalid-feedback">
+        Please provide your age.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control datepicker" name="date" id="validationCustom05" placeholder="Date of birth" required>
+      <div class="invalid-feedback">
+        Please select your date of birth.
+      </div>
+    </div>
+            </div>
+             <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Occupation" 
+        required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+     <div class="col-md-4 mb-3">
+     <select class="browser-default custom-select" required>
+      <option value="" disabled selected>Marital Status</option>
+      <option value="1">Single</option>
+      <option value="2">Married</option>
+      <option value="2">Widowed</option>
+     </select>
+      <div class="invalid-feedback">
+        Please tell us your marital status.
+      </div>
+    </div>          
+  </div>
+          <!--Heading-->
+          <h4 class="font-weight-bold my-4 text-left">NATIONAL DATA</h4>
+          <hr>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Nationality" 
+        required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom02" placeholder="State of Origin" 
+        required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <input type="email" class="form-control" id="validationCustomUsername" placeholder="City"
+ required>
+        <div class="invalid-feedback">
+          Please enter a valid city.
+        </div>
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="LGA"
+ required>
+        <div class="invalid-feedback">
+          Please enter a valid Local Government Area.
+        </div>
+      </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Home Town" required>
+      <div class="invalid-feedback">
+        Please provide your hometown.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <select class="browser-default custom-select" required>
+      <option value="" disabled selected>Religion</option>
+      <option value="Christianity">Christianity</option>
+      <option value="Islam">Islam</option>
+      <option value="Traditional">Traditional</option>
+     </select>
+      <div class="invalid-feedback">
+        Please select your date of birth.
+      </div>
+    </div>  
+  </div>
+          <!--Heading-->
+          <h4 class="font-weight-bold my-4 text-left">BIOLOGICAL DATA</h4>
+          <hr>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <input type="number" class="form-control" id="validationCustom01" placeholder="Weight (Kg)" 
+        required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <input type="number" class="form-control" id="validationCustom02" placeholder="Height (Ft)" 
+        required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Blood Group"
+ required>
+        <div class="invalid-feedback">
+          Please enter your blood group.
+        </div>
+      </div>
+  </div>
+          <!--Heading-->
+          <h4 class="font-weight-bold my-4 text-left">PARENTAL DATA</h4>
+          <hr>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Father’s fullname" 
+        required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Father’s State of Origin" 
+        required>
+      <div class="invalid-feedback">
+        Please enter a valid state.
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Father’s Hometown"
+ required>
+        <div class="invalid-feedback">
+          Please enter a valid town.
+        </div>
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Mother’s Fullname"
+ required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Mother’s State of Origin" required>
+      <div class="invalid-feedback">
+        Please provide your mother's state of origin.
+      </div>
+    </div>
+   <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Mother’s Home Town" required>
+      <div class="invalid-feedback">
+        Please provide your mother's hometown.
+      </div>
+    </div>
+  </div>  
+            <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to our privacy policy.
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary btn-sm btn-rounded" type="submit">Submit form</button>
+            </form>
+          
+        </div>
+        </div>
+      </div>
+      <!--Card-->
+    </div>
+    <!--Grid column-->
+</section>
+   
+  
+ <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"
+></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
