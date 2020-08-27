@@ -54,15 +54,16 @@ $('.datepicker').removeAttr('readonly');
   <div class="row">
 
     <!--Grid column-->
-    <div class="col-lg col-md-12 mb-lg-0 mb-4">
+    <div class="col-lg col-md-12 mb-lg-0 mb-4 mx-5">
       <!--Card-->
-      <div class="card testimonial-card">
+      <div class="card mx-5 testimonial-card">
         <!--Background color-->
-        <div class="card-header bg-primary" style=""></div>
-        <!--Avatar-->
+        <div class="card-header bg-primary" style="height: 150px;">
+         <!--Avatar-->
         <div class="avatar mr-auto ml-5 white">
           <img src="https://i.ibb.co/2tm5jSQ/UPLOADFORM.png" class="rounded-circle img-fluid">
         </div>
+       </div>
         <div class="card-body">
           <!--Heading-->
           <h4 class="font-weight-bold mb-4 text-left">PERSONAL DATA</h4>
@@ -73,14 +74,10 @@ $('.datepicker').removeAttr('readonly');
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom01" placeholder="Enter First name" 
         required>
-      
     </div>
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Last name" 
         required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
       <div class="input-group">
@@ -102,30 +99,21 @@ $('.datepicker').removeAttr('readonly');
       <option value="1">Male</option>
       <option value="2">Female</option>
      </select>
-      <div class="invalid-feedback">
-        Please select your gender.
-      </div>
     </div>
     <div class="col-md-4 mb-3">
-      <input type="number" class="form-control" id="validationCustom04" placeholder="Age (in years)" required>
+      <input type="number" min="1" max="201" class="form-control" id="validationCustom04" placeholder="Age (in years)" required>
       <div class="invalid-feedback">
         Please provide your age.
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control datepicker" name="date" id="validationCustom05" placeholder="Date of birth" required>
-      <div class="invalid-feedback">
-        Please select your date of birth.
-      </div>
     </div>
             </div>
              <div class="form-row">
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom01" placeholder="Occupation" 
         required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
      <div class="col-md-4 mb-3">
      <select class="browser-default custom-select" required>
@@ -146,19 +134,13 @@ $('.datepicker').removeAttr('readonly');
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom01" placeholder="Nationality" 
         required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom02" placeholder="State of Origin" 
         required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
-        <input type="email" class="form-control" id="validationCustomUsername" placeholder="City"
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="City"
  required>
         <div class="invalid-feedback">
           Please enter a valid city.
@@ -168,16 +150,10 @@ $('.datepicker').removeAttr('readonly');
   <div class="form-row">
     <div class="col-md-4 mb-3">
         <input type="text" class="form-control" id="validationCustomUsername" placeholder="LGA"
- required>
-        <div class="invalid-feedback">
-          Please enter a valid Local Government Area.
-        </div>
+ required>>
       </div>
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom04" placeholder="Home Town" required>
-      <div class="invalid-feedback">
-        Please provide your hometown.
-      </div>
     </div>
     <div class="col-md-4 mb-3">
       <select class="browser-default custom-select" required>
@@ -187,7 +163,7 @@ $('.datepicker').removeAttr('readonly');
       <option value="Traditional">Traditional</option>
      </select>
       <div class="invalid-feedback">
-        Please select your date of birth.
+        Please select your religion.
       </div>
     </div>  
   </div>
@@ -196,18 +172,12 @@ $('.datepicker').removeAttr('readonly');
           <hr>
   <div class="form-row">
     <div class="col-md-4 mb-3">
-      <input type="number" class="form-control" id="validationCustom01" placeholder="Weight (Kg)" 
+      <input type="number" min="4" max="400" class="form-control" id="validationCustom01" placeholder="Weight (Kg)" 
         required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
-      <input type="number" class="form-control" id="validationCustom02" placeholder="Height (Ft)" 
+      <input type="number" min="1" max="120" class="form-control" id="validationCustom02" placeholder="Height (Ft)" 
         required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
         <input type="text" class="form-control" id="validationCustomUsername" placeholder="Blood Group"
@@ -224,9 +194,6 @@ $('.datepicker').removeAttr('readonly');
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom01" placeholder="Father’s fullname" 
         required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
     </div>
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom02" placeholder="Father’s State of Origin" 
@@ -238,18 +205,12 @@ $('.datepicker').removeAttr('readonly');
     <div class="col-md-4 mb-3">
         <input type="text" class="form-control" id="validationCustomUsername" placeholder="Father’s Hometown"
  required>
-        <div class="invalid-feedback">
-          Please enter a valid town.
-        </div>
       </div>
   </div>
   <div class="form-row">
     <div class="col-md-4 mb-3">
         <input type="text" class="form-control" id="validationCustomUsername" placeholder="Mother’s Fullname"
  required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
       </div>
     <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom04" placeholder="Mother’s State of Origin" required>
@@ -259,9 +220,6 @@ $('.datepicker').removeAttr('readonly');
     </div>
    <div class="col-md-4 mb-3">
       <input type="text" class="form-control" id="validationCustom04" placeholder="Mother’s Home Town" required>
-      <div class="invalid-feedback">
-        Please provide your mother's hometown.
-      </div>
     </div>
   </div>  
             <div class="form-group">
