@@ -1,40 +1,22 @@
 html,
 body,
 header,
-.view {
+{
   height: 100%;
   font-family: "Montserrat", sans-serif;
 }
-#intro{
+body{
   background: url('https://i.ibb.co/3N085Bk/20200825-140752-0000-1.png')no-repeat center center fixed;
-   -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-size: cover;
 }
+.form-elegant .font-small {
+font-size: 0.8rem; }
 
-@media (max-width: 740px) {
-  html,
-  body,
-  header
-   {
-    height: 1000px;
-  }
-  .view{
-    height: 700px;
-  }
-}
+.form-elegant .z-depth-1a {
+-webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
 
-@media (min-width: 800px) and (max-width: 850px) {
-  html,
-  body,
-  header
- {
-    height: 650px;
-  }
-  .view{
-     height: 550px;
-  }
-}
-
-
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+-webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
