@@ -1,0 +1,564 @@
+ <!DOCTYPE html>
+<html>
+ <head> 
+  <title>Census Management System</title> 
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+<link
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="AdminDashboard.css">
+   <script>
+   // Line
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        //pie
+        var ctxP = document.getElementById("pieChart").getContext('2d');
+        var myPieChart = new Chart(ctxP, {
+            type: 'pie',
+            data: {
+                labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+                datasets: [{
+                    data: [300, 50, 100, 40, 120],
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: false
+            }
+        });
+
+
+        //line
+        var ctxL = document.getElementById("lineChart").getContext('2d');
+        var myLineChart = new Chart(ctxL, {
+            type: 'line',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                        label: "My First dataset",
+                        backgroundColor: [
+                            'rgba(105, 0, 132, .2)',
+                        ],
+                        borderColor: [
+                            'rgba(200, 99, 132, .7)',
+                        ],
+                        borderWidth: 2,
+                        data: [65, 59, 80, 81, 56, 55, 40]
+                    },
+                    {
+                        label: "My Second dataset",
+                        backgroundColor: [
+                            'rgba(0, 137, 132, .2)',
+                        ],
+                        borderColor: [
+                            'rgba(0, 10, 130, .7)',
+                        ],
+                        data: [28, 48, 40, 19, 86, 27, 90]
+                    }
+                ]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+
+        //radar
+        var ctxR = document.getElementById("radarChart").getContext('2d');
+        var myRadarChart = new Chart(ctxR, {
+            type: 'radar',
+            data: {
+                labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+                datasets: [{
+                    label: "My First dataset",
+                    data: [65, 59, 90, 81, 56, 55, 40],
+                    backgroundColor: [
+                        'rgba(105, 0, 132, .2)',
+                    ],
+                    borderColor: [
+                        'rgba(200, 99, 132, .7)',
+                    ],
+                    borderWidth: 2
+                }, {
+                    label: "My Second dataset",
+                    data: [28, 48, 40, 19, 96, 27, 100],
+                    backgroundColor: [
+                        'rgba(0, 250, 220, .2)',
+                    ],
+                    borderColor: [
+                        'rgba(0, 213, 132, .7)',
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        //doughnut
+        var ctxD = document.getElementById("doughnutChart").getContext('2d');
+        var myLineChart = new Chart(ctxD, {
+            type: 'doughnut',
+            data: {
+                labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+                datasets: [{
+                    data: [300, 50, 100, 40, 120],
+                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+ new WOW().init();
+
+        // Regular map
+        function regular_map() {
+            var var_location = new google.maps.LatLng(40.725118, -73.997699);
+
+            var var_mapoptions = {
+                center: var_location,
+                zoom: 14
+            };
+
+            var var_map = new google.maps.Map(document.getElementById("map-container"),
+                var_mapoptions);
+
+            var var_marker = new google.maps.Marker({
+                position: var_location,
+                map: var_map,
+                title: "New York"
+            });
+        }
+
+        // Initialize maps
+        google.maps.event.addDomListener(window, 'load', regular_map);
+
+        new Chart(document.getElementById("horizontalBar"), {
+            "type": "horizontalBar",
+            "data": {
+                "labels": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey"],
+                "datasets": [{
+                    "label": "My First Dataset",
+                    "data": [22, 33, 55, 12, 86, 23, 14],
+                    "fill": false,
+                    "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
+                        "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)",
+                        "rgba(54, 162, 235, 0.2)",
+                        "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"
+                    ],
+                    "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)",
+                        "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)",
+                        "rgb(201, 203, 207)"
+                    ],
+                    "borderWidth": 1
+                }]
+            },
+            "options": {
+                "scales": {
+                    "xAxes": [{
+                        "ticks": {
+                            "beginAtZero": true
+                        }
+                    }]
+                }
+            }
+        });
+   </script>
+</head>
+<body>
+<div class="container-for-admin">
+<!--Main Navigation-->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" target="_blank">
+          <strong class="blue-text"></strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <!-- Search form -->
+    <form class="form-inline mr-auto">
+      <div class="md-form my-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <i class="fas fa-search text-white ml-3" aria-hidden="true"></i>
+      </div>
+    </form>
+            </li>
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a class="logo-wrapper waves-effect">
+        <div class="avatar ml-auto mr-2 white" style="width: 20%; height: 20%;">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid mt-3">
+        </div>
+              </a>
+            </li>
+            <li class="nav-item mt-3">
+              <a class="logo-wrapper waves-effect">
+          <h6 class="font-weight-bold mt-2">
+            James Doe
+              </h6>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
+        <div class="d-flex justify-content-around">
+            <a class="waves-effect mt-3" style="width: 50%;">
+        <div class="avatar my-1 white">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid mt-3">
+        </div>
+              </a>
+          
+            <a class="waves-effect">
+         <h6 class="mx-3 my-5 py-4 font-weight-bold">
+          James Doe</h6>
+              </a>
+            </div>
+         
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item active waves-effect">
+          <i class="fa fa-pie-chart mr-3"></i>Dashboard
+        </a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fa fa-user mr-3"></i>Profile</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fa fa-table mr-3"></i>Statistics</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fa fa-map mr-3"></i>Population</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          <i class="fa fa-money mr-3"></i>Report</a>
+        <a href="#" class="list-group-item mt-auto list-group-item-action waves-effect">
+          <i class="fa fa-money mr-3"></i>Logout</a>
+      </div>
+
+    </div>
+    <!-- Sidebar -->
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="pt-5 mx-lg-5">
+    <div class="container-fluid mt-5">
+
+      <!-- Heading -->
+      <div class="card mb-4 mt-2 wow fadeIn">
+
+        <!--Card content-->
+        <div class="card-body d-sm-flex bg-success justify-content-between">
+
+          <h4 class="mb-2 mb-sm-0 pt-1 text-white text-uppercase">
+            Welcome, James Doe to the Census Management System.
+          </h4>
+        </div>
+
+      </div>
+      <!-- Heading -->
+      
+      <div class="row wow fadeIn">
+
+      <!--Grid nested row-->
+      <div class=" col-12 col-lg-9 col-md-9 col-sm-7 wow fadeIn">
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-11 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <div class="card-body bg-success text-center">
+              <a class="text-white"> Overall census</a>
+            </div>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-5 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card mb-4">
+            <!--Card content-->
+            <div class="card-body bg-pink accent-1 text-center" style="background-color: #f50057;">
+            <a class="text-white">
+              50 million Population
+              </a>
+            </div>
+
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+         <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-5 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card mb-4">
+            <!--Card content-->
+            <div class="card-body bg-purple darken-4 text-center" style="background-color: #4a148c ;">
+            <a class="text-white">
+              10 million Males
+              </a>
+            </div>
+
+          </div>
+          <!--/.Card-->
+        
+         </div>
+        <!--Grid column-->
+
+         </div>
+      <!--Grid row-->
+       
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-5 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <div class="card-body text-center" style="background-color: #01579b;">
+              <a class="text-white"> 30 million Females</a>
+            </div>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-5 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card mb-4">
+            <!--Card content-->
+            <div class="card-body bg-success text-center" >
+            <a class="text-white">
+              10 million Children
+              </a>
+            </div>
+
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--/.Grid column-->
+         <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-5 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card mb-4">
+            <!--Card content-->
+            <div class="card-body text-center" style="background-color:#b71c1c ;">
+            <a class="text-white">
+              50 thousand Migrants
+              </a>
+            </div>
+
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-5 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <div class="card-body text-center" style="background-color: #26a69a;">
+              <a class="text-white"> 10 million literates</a>
+            </div>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-5 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card mb-4">
+            <!--Card content-->
+            <div class="card-body text-center" style="background-color: #64dd17;">
+            <a class="text-white">
+              30 million non-literates
+              </a>
+            </div>
+
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--/.Grid column-->
+         <!--Grid column-->
+        <div class="col-9 col-md-3 col-sm-5 mx-auto mb-4">
+
+          <!--Card-->
+          <div class="card mb-4">
+            <!--Card content-->
+            <div class="card-body bg-purple darken-4 text-center" style="background-color: #4a148c ;">
+            <a class="text-white">
+              30 million Tech-savvy
+              </a>
+            </div>
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--/.Grid column-->
+      </div>
+      <!--Grid row-->
+
+      
+      </div>
+      <!--Grid nested row-->
+
+      
+      
+        <!--Grid column-->
+        <div class="col-9 col-lg-3 col-md-3 col-sm-5 mx-auto">
+
+          <!--Card-->
+          <div class="card mb-4" style="background-color: #0288d1;">
+
+            <!--Card content-->
+            <div class="card-body">
+
+              <!-- List group links -->
+              <div class="list-group list-group-flush">
+                <p class="list-group-item list-group-item-action waves-effect">NEWS
+                  <span class="badge badge-primary badge-pill pull-right">INFO
+                    <i class="fa fa-arrow-down ml-1"></i>
+                  </span>
+                </p>
+                <p class="text-white">
+                  A new content wire service - born out of a collaboration between
+                  California Polythechnic, State University and the University of Miami 
+                  is  aiming to help news organizations do a better job of covering state and local government info with a process driven by artificial intelligence.
+                </p>
+              </div>
+              <!-- List group links -->
+
+            </div>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+    
+      </div>
+      <!--Grid row-->
+
+
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"
+></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
