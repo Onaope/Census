@@ -222,7 +222,7 @@
    </script>
 </head>
 <body>
- <div class="container-for-admin">
+<div class="container-for-admin">
 <!--Main Navigation-->
   <header>
 
@@ -260,8 +260,18 @@
           <!-- Right -->
           <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
-              <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
+              <a class="logo-wrapper waves-effect">
+        <div class="avatar mx-auto white" style="width: 20%; height: 20%;">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid mt-3">
+        </div>
+              </a>
+            </li>
+            <li class="nav-item mt-3">
+              <a class="logo-wrapper waves-effect">
+          <select class="browser-default custom-select">
+              <option value="1" selected>Administrator</option>
+              <option value="2">Citizen</option>
+          </select>
               </a>
             </li>
           </ul>
@@ -274,13 +284,19 @@
 
     <!-- Sidebar -->
     <div class="sidebar-fixed position-fixed">
-
-      <a class="logo-wrapper waves-effect">
+        <div class="list-group list-group-horizontal-small">
+            <a class="list-group-item waves-effect mt-3">
         <div class="avatar mx-auto white">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="rounded-circle img-fluid mt-3">
         </div>
-      </a>
-
+              </a>
+          
+            <a class="list-group-item mt-3 waves-effect">
+         <h6 class="mx-5 py-1 font-weight-bold">
+          Administrator</h6>
+              </a>
+            </div>
+         
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item active waves-effect">
           <i class="fa fa-pie-chart mr-3"></i>Dashboard
@@ -318,16 +334,6 @@
           <h4 class="mb-2 mb-sm-0 pt-1">
             Welcome, Administrator
           </h4>
-
-          <form class="d-flex justify-content-center">
-            <!-- Default input -->
-            <input type="search" placeholder="Type your query" aria-label="Search" class="form-control">
-            <button class="btn btn-primary btn-sm my-0 p" type="submit">
-              <i class="fa fa-search"></i>
-            </button>
-
-          </form>
-
         </div>
 
       </div>
